@@ -27,7 +27,8 @@ const Header = () => {
   
   const login=useGoogleLogin({
     onSuccess:(codeResp)=>GetUserProfile(codeResp),
-    onError:(error)=>console.log(error)
+    onError:(error)=>console.log(error),
+    redirect_uri: "https://ai-trip-planner-azzh.vercel.app/", // Update this
   })
   const GetUserProfile=(tokenInfo)=>{
     console.log("hi from getuserprofile")
